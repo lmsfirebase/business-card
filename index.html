@@ -11,16 +11,19 @@ body {
   align-items: center;
   height: 100vh;
   font-size: 4vw;
+  text-align: center;
 }
 </style>
 </head>
 <body>
+
 <div id="msg">Initializing…</div>
-  <div style="font-size: 15vw;">🖕</div>
+
 <script>
 setTimeout(() => {
-  document.getElementById('msg').innerText = 'Fuck You';
+  document.getElementById('msg').innerHTML = 'Fuck You<br><span style="font-size:8vw;">🖕</span>';
 }, 2000);
 </script>
+
 </body>
 </html>
