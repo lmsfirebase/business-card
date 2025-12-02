@@ -13,12 +13,12 @@ body {
   text-align: center;
 }
 
-/* Initial text */
+/* Initial loading text */
 #msg {
   font-size: 4vh;
 }
 
-/* Final message */
+/* Final reveal */
 .final-text {
   font-size: 12vh;
   line-height: 1.1;
@@ -32,11 +32,20 @@ body {
 </head>
 <body>
 
-<div id="msg">Initializing…</div>
+<div id="msg">Initializing</div>
 
 <script>
+let dots = 0;
+const msg = document.getElementById('msg');
+
+const dotInterval = setInterval(() => {
+  dots = (dots + 1) % 4;
+  msg.textContent = 'Initializing' + '.'.repeat(dots);
+}, 500);
+
 setTimeout(() => {
-  document.getElementById('msg').innerHTML =
+  clearInterval(dotInterval);
+  msg.innerHTML =
     '<div class="final-text">Fuck You</div><div id="emoji">🖕</div>';
 }, 2000);
 </script>
