@@ -13,8 +13,14 @@ body {
   text-align: center;
 }
 
+/* Initial text */
 #msg {
-  font-size: 10vh;
+  font-size: 4vh;
+}
+
+/* Final message */
+.final-text {
+  font-size: 12vh;
   line-height: 1.1;
 }
 
@@ -31,7 +37,7 @@ body {
 <script>
 setTimeout(() => {
   document.getElementById('msg').innerHTML =
-    'Fuck You<br><div id="emoji">🖕</div>';
+    '<div class="final-text">Fuck You</div><div id="emoji">🖕</div>';
 }, 2000);
 </script>
 
